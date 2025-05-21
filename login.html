@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  
+
+  <body class="min-h-screen bg-gradient-to-br from-purple-700 via-pink-500 to-purple-300 flex items-center justify-center">
+    <div class="bg-white p-8 rounded-3xl shadow-2xl w-full max-w-md animate-fade-in">
+      <div class="flex items-center justify-center mb-6">
+        <i data-lucide="lock" class="w-10 h-10 text-purple-700"></i>
+        <h2 class="text-3xl font-bold text-purple-700 ml-2">Acessar Conta</h2>
+      </div>
+     <form class="space-y-6" action="emocao.html" method="get">
+
+
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700">E-mail</label>
+          <div class="relative">
+            <i data-lucide="mail" class="absolute left-3 top-3.5 text-gray-400 w-5 h-5"></i>
+            <input
+              type="email"
+              id="email"
+              class="pl-10 pr-4 py-2 w-full border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-pink-500"
+              placeholder="seuemail@exemplo.com"
+              required
+            />
+          </div>
+        </div>
+        <div>
+          <label for="password" class="block text-sm font-medium text-gray-700">Senha</label>
+          <div class="relative">
+            <i data-lucide="key" class="absolute left-3 top-3.5 text-gray-400 w-5 h-5"></i>
+            <input
+              type="password"
+              id="password"
+              class="pl-10 pr-4 py-2 w-full border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-pink-500"
+              placeholder="********"
+              required
+            />
+          </div>
+        </div>
+        <button
+          type="submit"
+          class="w-full bg-pink-500 text-white py-2 rounded-lg hover:bg-pink-600 transition duration-300"
+        >
+          Entrar
+        </button>
+        <p class="text-center text-sm text-gray-600 mt-4">
+          Não tem uma conta?
+          <a href="#" class="text-pink-500 hover:underline">Cadastre-se</a>
+        </p>
+      </form>
+    </div>
+
+    <style>
+      .animate-fade-in {
+        animation: fadeIn 0.6s ease-in-out both;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
